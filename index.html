@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Christmas Tree 🎄</title>
+    <title>Dreamy 3D Christmas Tree 🎄</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="info">拖动旋转 • 滚动缩放<br>Merry Christmas! 🎅</div>
+    <div id="music-controls">
+        <label for="music-upload" class="btn">🎵 上传节日音乐</label>
+        <input type="file" id="music-upload" accept="audio/*" style="display: none;">
+        <audio id="bgm" loop></audio>
+        <button id="play-btn" class="btn">播放</button>
+    </div>
+
+    <div id="message-modal" class="hidden">
+        <h3>写下你的祝福</h3>
+        <textarea id="msg-input" placeholder="Merry Christmas!"></textarea>
+        <button id="add-card-btn">挂上卡片</button>
+        <button id="close-modal">取消</button>
+    </div>
+
+    <div id="info">点击圣诞树挂上祝福卡片 • 拖动旋转<br>Merry Christmas! 🎅</div>
+
     <script type="importmap">
         {
             "imports": {

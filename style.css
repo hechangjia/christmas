@@ -1,17 +1,87 @@
 body {
     margin: 0;
     overflow: hidden;
-    background-color: #000; /* 深色背景适合展示灯光 */
+    background-color: #050510;
+    font-family: 'Mountains of Christmas', cursive; /* 节日字体 */
 }
 
 #info {
     position: absolute;
-    top: 10px;
+    top: 20px;
     width: 100%;
     text-align: center;
-    color: white;
-    font-family: sans-serif;
+    color: #fff;
+    font-size: 24px;
     pointer-events: none;
+    z-index: 10;
+    text-shadow: 0 0 10px #ffcc00;
+}
+
+/* 按钮样式 */
+.btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+    font-family: inherit;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+#music-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 20;
+    display: flex;
+    gap: 10px;
+}
+
+/* 留言弹窗 */
+#message-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(20, 20, 40, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #ffd700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
     z-index: 100;
-    text-shadow: 0 0 5px #ff0000;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+textarea {
+    width: 250px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #666;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* 3D 场景中的文字标签样式 */
+.label {
+    color: #FFF;
+    font-family: sans-serif;
+    padding: 2px;
+    background: rgba(0, 0, 0, 0.6);
 }
